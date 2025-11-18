@@ -68,4 +68,4 @@ function quo(num1,num2){
     }
 }
 
-quo(2,0);
+quo(25,0);

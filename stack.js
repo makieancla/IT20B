@@ -3,6 +3,10 @@ class Stack{
         this.data ={};
         this.topIndex = -1;
     }
+      push(element){
+        this.topIndex++;
+        this.data[this.topIndex] = element;
+    }
 
     traverse(){
         let output = "";
@@ -38,7 +42,7 @@ class Stack{
 //
 
 let stack1 = new Stack();
-    
+
 stack1.push(4);
 stack1.push(2);
 stack1.push(3);

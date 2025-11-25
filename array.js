@@ -40,26 +40,43 @@ class Arry{
     }
 
     delete(index){
-       insert(index, element){
+
+       
         //correcting Statement
-        if (index <o || index > this.length){
+       if(index < 0 || index >= this.length){
             console.log("Invalid Index");
             return;
-        } 
-
+        }
          //shifting condition
         for(let i=this.length; i<index; i++){
             this.data[i] = this.data[i-1];
         }
 
         //AFTER conditon
-        delete this.data[this.length -1];
+     delete this.data[this.length-1];
         this.length--;
+
     }
-    
-    
+      search(element){
+        for(let i=0; i < this.length;i++){
+            if(this.data[i] === element){
+                console.log(element + " is found at index "+ i);
+                return i;
+            }
+        }
+
+        console.log(element + " is not found at any index ");
+        return -1;
+    }
+
+}
+
+
 //
+arr1 = new Array([4,2,3]);
 
-arr1 =new Arry(4,2,3);
-
+arr1.traverse();
+arr1.update(1,50);
+arr1.traverse();
+arr1.delete(0);
 arr1.traverse();
